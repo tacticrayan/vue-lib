@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Props :nom="{ first: 'Tactic', last: 'Rayan' }"></Props>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Props from './components/Props.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Props
   }
 }
 </script>

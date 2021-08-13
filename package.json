@@ -5,6 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-lib": "vue-cli-service build --target lib --name HelloWorld src/components/HelloWorld.vue",
+    "build-pro": "vue-cli-service build --target lib --name props src/components/Props.vue",
+    "build-web-comp": "vue-cli-service build --target wc -name HelloWorld src/components/HelloWorld.vue",
+    "build-wc-pro": "vue-cli-service build --target wc --name wc-props src/components/Props.vue",
+    "build-multi": "vue-cli-service build --target wc --name multi-wc src/components/*.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

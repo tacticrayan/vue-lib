@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="./pro/props.umd.js"></script>
+  <link rel="stylesheet" href="./pro/props.css">
+</head>
+
+<body>
+  <div id="box">
+    <prop :nom="nom"></prop>
+  </div>
+</body>
+
+</html>
+<script>
+  const NAME = {
+    first: 'Tactic',
+    last: 'Rayan'
+  }
+  showName(NAME, '#box')
+  function showName(name, dom) {
+    new Vue({
+      components: {
+        prop: props
+      },
+      data() {
+        return {
+          nom: name
+        }
+      }
+    }).$mount(dom)
+  }
+</script>
